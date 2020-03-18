@@ -34,29 +34,33 @@
 </div>
 </body>
 <script>
-    var inputNumber1 = parseInt(document.getElementById("firstnumber").value);
-    var inputNumber2 = parseInt(document.getElementById("secondnumber").value);
+
     function add2number(){
+        var inputNumber1 = parseInt(document.getElementById("firstnumber").value);
+        var inputNumber2 = parseInt(document.getElementById("secondnumber").value);
         var result= inputNumber1+inputNumber2;
-        console.log(inputNumber1);
-        console.log(inputNumber2);
-        showResult();
+        showResult(result);
     }
     function sub2number(){
+        var inputNumber1 = parseInt(document.getElementById("firstnumber").value);
+        var inputNumber2 = parseInt(document.getElementById("secondnumber").value);
         var result= inputNumber1-inputNumber2;
-        showResult();
-
+        showResult(result);
     }
     function multi2number(){
+        var inputNumber1 = parseInt(document.getElementById("firstnumber").value);
+        var inputNumber2 = parseInt(document.getElementById("secondnumber").value);
         var result= inputNumber1*inputNumber2;
-        showResult();
+        showResult(result);
     }
     function div2number(){
+        var inputNumber1 = parseInt(document.getElementById("firstnumber").value);
+        var inputNumber2 = parseInt(document.getElementById("secondnumber").value);
         var result= inputNumber1/inputNumber2;
-        showResult();
+        showResult(result);
     }
-    function showResult() {
-        document.getElementById("result").innerHTML="Result="+result
+    function showResult(result) {
+        document.getElementById("result").innerHTML="Result= "+result;
 
     }
 
