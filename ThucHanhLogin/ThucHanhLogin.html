@@ -8,6 +8,20 @@
 
 </body>
 <script>
-
+    let username = prompt("nhap vao ten tai khoan");
+    if (username==="Admin") {
+        let password = prompt("nhap vao mat khau");
+        if(password==="TheMaster") {
+            alert("welcome");
+        }else if (password==null) {
+            alert("password you fool");
+        }else {
+            alert("Wrong Passowrd");
+        }
+    }else if(username==null) {
+        alert("Canceled");
+    }else {
+        alert("idont know you");
+    }
 </script>
 </html>
