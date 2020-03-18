@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen doi tien</title>
+    <style>
+        label{
+            display:block;
+            margin: 5px;
+        }
+        div{
+            display: inline-block;
+            float: left;
+            margin-left: 20px;
+            text-align: center;
+            height: 100%;
+
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+<form action="" method="post">
+    <div id="container">
+        <div>
+            <label for="inputAmount"> Amount </label>
+            <input type="text" title="Amount" id="inputAmount">
+        </div>
+        <div>
+            <label for="fromCurrency">From Currency</label>
+            <select name="currencyFrom" id="fromCurrency">
+                <option value="vietnam">VietNam</option>
+                <option value="usd">USD</option>
+            </select>
+        </div>
+        <div>
+            <label for="toCurrency"> To Currency</label>
+            <select name="currencyTo" id="toCurrency">
+                <option value="vietnam">VietNam</option>
+                <option value="usd">USD</option>
+            </select>
+        </div>
+        <div>
+            <label for="convert"></label>
+            <button type="button" id="convert" name="doConvert"onclick="convertMoney()">Convert</button>
+        </div>
+    </div>
+    </br>
+    <div id="result">
+
+    </div>
+</form>
+<script>
+    function convertMoney() {
+        var amountInput = parseInt(document.getElementById("inputAmount").value);
+        var optionsInput=document.getElementById("fromCurrency").value;
+        var optionsOutput=document.getElementById("toCurrency").value;
+        var amountOutput=0;
+        console.log(amountInput);
+        if(optionsInput=="usd" && optionsOutput=="vietnam"){
+           let amountOutput=amountInput*23000;
+            document.getElementById("result").innerHTML="Result= "+amountOutput+" dong";}
+        if(optionsInput === optionsOutput){
+            document.getElementById("result").innerHTML="vui long lua chon loai tien";
+            }
+            else{
+            let amountOutput=amountInput/23000;
+            document.getElementById("result").innerHTML="Result= "+amountOutput+" usd";
+            }
+        }
+</script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <style>
+        #inputnumbers{
+            padding: 5px;
+            margin:5px;
+        }
+        #method{
+            margin:5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<div id="datainput">
+    <div id="inputnumbers">
+<!--        <label for="firstnumber"></label>-->
+        <input type="text" id="firstnumber">
+<!--        <label for="secondnumber"></label>-->
+        <input type="text" id="secondnumber">
+    </div>
+    <div id="method">
+        <button onclick="add2number()" id="add">Addition(+)</button>
+        <button onclick="sub2number()" id="sub">Subtraction(-)</button>
+        <button onclick="multi2number()" id="multipe">Multiplication(*)</button>
+        <button onclick="div2number()" id="division">Division(/)</button>
+    </div>
+</div>
+<div id="result">
+
+</div>
+</body>
+<script>
+    var inputNumber1 = parseInt(document.getElementById("firstnumber").value);
+    var inputNumber2 = parseInt(document.getElementById("secondnumber").value);
+    function add2number(){
+        var result= inputNumber1+inputNumber2;
+        console.log(inputNumber1);
+        console.log(inputNumber2);
+        showResult();
+    }
+    function sub2number(){
+        var result= inputNumber1-inputNumber2;
+        showResult();
+
+    }
+    function multi2number(){
+        var result= inputNumber1*inputNumber2;
+        showResult();
+    }
+    function div2number(){
+        var result= inputNumber1/inputNumber2;
+        showResult();
+    }
+    function showResult() {
+        document.getElementById("result").innerHTML="Result="+result
+
+    }
+
+</script>
+</html>
